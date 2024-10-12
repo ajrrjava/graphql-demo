@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+dependencies {
+    implementation project(':common')
+    implementation project(':schema')
+    implementation libs.jdbi
+    implementation libs.jdbi_sql
+    implementation libs.lombok
+    annotationProcessor libs.lombok
+    implementation libs.servlet
+    implementation libs.sqlserver
+    implementation libs.h2
+    implementation libs.hikari
+    implementation libs.config
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+

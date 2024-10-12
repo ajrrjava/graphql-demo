@@ -1,0 +1,31 @@
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+type Query {
+    getPlanets: [Planet]
+    getPlanet(id: Int): Planet
+}
+
+type Mutation {
+    addPlanet(planet: PlanetInput): Boolean
+    updatePlanet(planet: PlanetInput): Boolean
+    deletePlanet(id: Int): Boolean
+}
+
+type Planet {
+    id: Int
+    name: String!
+    description: String
+    diameter: Float
+    type: String
+}
+
+input PlanetInput {
+    id: Int
+    name: String
+    description: String
+    diameter: Float
+    type: String
+}

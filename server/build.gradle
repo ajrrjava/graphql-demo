@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.gretty' version '4.1.5'
+}
+
+dependencies {
+    implementation project(':common')
+    implementation project(':database')
+    implementation project(':schema')
+    implementation libs.lombok
+    annotationProcessor libs.lombok
+    implementation libs.dropwizard
+    implementation libs.graphql
+    implementation libs.graphql_tools
+    implementation libs.graphql_java
+    implementation libs.graphql_servlet
+    implementation libs.gson
+    implementation libs.servlet
+    implementation libs.config
+    implementation libs.vertex
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+application {
+    mainClass = 'com.strateknia.enfoqus.api.EnfoqusServer'
+}
+

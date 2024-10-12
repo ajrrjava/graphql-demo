@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+}
+
+dependencies {
+    implementation project(':common')
+    implementation libs.jdbi
+    implementation libs.lombok
+    implementation libs.sqlserver
+    implementation libs.hikari
+    implementation libs.flyway
+    implementation libs.flyway_sql_server
+    implementation libs.pico_cli
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}

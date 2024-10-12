@@ -1,0 +1,12 @@
+rootProject.name = 'graphql-demo'
+include 'graphql'
+include 'schema'
+include 'common'
+include 'database'
+include 'server'
+
+dependencyResolutionManagement {
+    repositories {
+        mavenCentral()
+    }
+}
